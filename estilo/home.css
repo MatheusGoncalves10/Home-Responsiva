@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('http://fonts.cdnfonts.com/css/century-gothic');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* início da estilização do menu*/
+.menu{
+    width: 100%;
+    height: 10vh;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px 0 100px;
+}
+.menu .logo{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    letter-spacing: 10px;
+    font-weight: 500;
+}
+.menu .menu-icon i{
+    display: none;
+    cursor: pointer;
+    font-size: 35px;
+}
+.menu .lista{
+    display: flex;
+    list-style: none;
+}
+.menu .lista li{
+    padding: 1cm;
+}
+.menu .lista li a{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+.menu .lista li a:hover{
+    color: #6c63ff;
+}
+/* fim da estilização do menu*/
+
+/* início da estilização do banner*/
+.banner{
+    width: 100%;
+    height: 90vh;
+    font-family: 'Century Gothic', sans-serif;
+    color: #fff;
+}
+.titulo{
+    padding-top: 30vh;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subtitulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botao button{
+    background-color: #6c63ff;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: 1px solid #6c63ff;
+    border-radius: 3px;
+    padding: 25px 25px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.botao button a{
+    text-decoration: none;
+    color: #fff;
+}
+.botao button:hover{
+    background-color: transparent;
+    border-color: #fff;
+}
+/* fim da estilização do banner*/
+
+@media (max-width: 920px) {
+    .menu .menu-icon i{
+        display: block;
+    }
+    .menu .lista{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #6c63ff;
+        top: 10vh;
+        left: -100%;
+        text-align: center;
+        display: block;
+        transition: all 0.5s ease;
+    }
+    .menu .lista li{
+        padding: 1.7cm;
+    }
+    .menu .lista li a{
+        font-size: 18px;
+    }
+    .menu .lista li a:hover{
+        color: #fff;
+    }
+    .menu .lista.abrir{
+        left: 0;
+    }
+}
+@media (max-width: 655px) {
+    .titulo{
+        font-size: 30px;
+    }
+    .subtitulo{
+        font-size: 15px;
+    }
+}
+@media (max-width: 478px) {
+    .titulo{
+        font-size: 25px;
+    }
+    .subtitulo{
+        font-size: 12px;
+    }
+}
+@media (max-width: 404px) {
+    .titulo{
+        font-size: 18px;
+    }
+    .subtitulo{
+        font-size: 6px;
+    }
+}
